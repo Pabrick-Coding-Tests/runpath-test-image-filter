@@ -1,0 +1,15 @@
+<main>
+
+  <h1>Welcome to {{ title }}!</h1>
+
+  <app-paginator
+    *ngIf="paginatorConfig"
+    [config]="paginatorConfig"
+    (onChangePage)="loadPage($event)">
+  </app-paginator>
+
+  <app-gallery
+    [gallery]="currentGallery">
+  </app-gallery>
+  
+</main>

@@ -1,0 +1,14 @@
+<section class="filter" *ngIf="gallery">
+
+  <label>Search by title:</label>
+  <input [(ngModel)]="searchText" placeholder="Type anything">
+
+</section>
+
+<section class="gallery" *ngIf="gallery">
+
+  <div class="gallery-block" *ngFor="let photo of gallery | filter : searchText">
+    <app-photo [data]="photo"></app-photo>
+  </div>
+
+</section>
